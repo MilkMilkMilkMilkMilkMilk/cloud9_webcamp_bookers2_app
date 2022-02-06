@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-      <%= link_to "Bookers2", top_path 
-    </title>
+    <title>Bookers2</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,6 +10,9 @@
   </head>
 
   <body>
+    <h2>
+      <%= link_to "bookers", top_path %>
+    </h2>
     <% if user_signed_in? %>
       <li>
         <%= link_to "Home", user_path(current_user) %>
@@ -40,5 +41,6 @@
       </li>
     <% end %>
     <%= yield %>
+    <p>CopyRight Infratop.inc</p>
   </body>
 </html>
