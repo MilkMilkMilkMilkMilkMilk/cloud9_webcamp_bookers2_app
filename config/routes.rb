@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get "/top"=>'homes#top'
   get "home/about"=>"homes#about",as: :homes
+  
+  post 'books' => 'books#create'
 
   resources :books
   resources :users
