@@ -1,3 +1,8 @@
+<h1>User info</h1>
+ <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+ <p>name</p>
+ <p>introduction</p>
+
 <h1>New book</h1>
 <%= form_with model: @book, url:'/books', local:true do |f| %>
   <h4>Title</h4>

@@ -1,7 +1,11 @@
 class BooksController < ApplicationController
   def create
+    book = Book.new(book_params)
+    book.save
+    redirect_to '/books'
+    #リダイレクト先の記述がわからない
   end
-  
+
   def index
     @book = Book.new
     @user = current_user
@@ -11,6 +15,11 @@ class BooksController < ApplicationController
   end
 
   def edit
+  end
+
+  private
+  def book_params
+    params.require(:book).permit(:title, :body)
   end
 
 end
