@@ -4,17 +4,17 @@
       <div class="row">
         <div class="col-md-3">
           <h2>User info</h2>
-          <%= attachment_image_tag book.user, :profile_image, size:'63x63', format: 'jpeg', fallback: "no_image.jpg" %>
+          <%= attachment_image_tag @user, :profile_image, size:'63x63', format: 'jpeg', fallback: "no_image.jpg" %>
             <table class="table">
               <tbody>
                 <tr></tr>
                 <tr>
                   <th>name</th>
-                  <th><%= book.user.name %></th>
+                  <th></th>
                 </tr>
                 <tr>
                   <th>introduction</th>
-                  <th><%= book.user.introduction %></th>
+                  <th></th>
                 </tr>
               </tbody>
             </table>
