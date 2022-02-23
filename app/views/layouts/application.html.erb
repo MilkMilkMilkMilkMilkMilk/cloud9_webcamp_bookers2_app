@@ -54,17 +54,20 @@
       </nav>
     </header>
 
-    <% if flash[:notice] %>
-     <p id="notice">
-      <%= flash[:notice] %>
-     </p>
-    <% end %>
-
-    <% if flash[:alert] %>
-     <p id="notice">
-      <%= flash[:alert] %>
-     </p>
-    <% end %>
+    <div class="text-success">
+      <% if flash[:notice] %>
+        <p id="notice">
+          <%= flash[:notice] %>
+        </p>
+      <% end %>
+    </div>
+    <div class="text-danger">
+      <% if flash[:alert] %>
+        <p id="notice">
+          <%= flash[:alert] %>
+        </p>
+      <% end %>
+    </div>
 
     <%= yield %>
 
